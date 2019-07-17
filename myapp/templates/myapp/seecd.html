@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>List CD's!!</title>
+  </head>
+  <body>
+    <table border="2px">
+      <thead>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Singer/Artist</th>
+        <th>Date</th>
+        <th>Genre</th>
+      </thead>
+
+      {% if data %}
+
+      {% for entry in data %}
+      <tr>
+        <td>{{ entry.title }}</td>
+        <td>{{ entry.description }}</td>
+        <td>{{ entry.artist }}</td>
+        <td>{{ entry.date }}</td>
+        <td>{{ entry.genre }}</td>
+      </tr>
+      {% endfor %}
+
+      {% endif %}
+    </table>
+
+
+    <a href="{% url 'home' %}"> <button type="button" name="button">Go Back</button></a>
+  </body>
+</html>

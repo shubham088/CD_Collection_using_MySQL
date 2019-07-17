@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Add CD's !!</title>
+  </head>
+  <body>
+    <form class=""  method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" name="" value="Add">
+        <a href="{% url 'home' %}"> <button type="button" name="button">Go Back</button></a>
+    </form>
+  </body>
+</html>
